@@ -4,5 +4,7 @@ import redis
 
 r = redis.Redis(
     host='magnet-redis.usphqa.ng.0001.usw2.cache.amazonaws.com',
-    port=6379,
-    password='password')
+    port=6379)
+
+members = r.smembers('set1')
+print(members)
